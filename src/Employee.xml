@@ -6,15 +6,29 @@
 
   <!-- Employee -->
 
+  <!-- Initializing Object using setters and getters. -->
   <bean id="employee1"
         class="com.moha0902.learn.Employee">
-    <property name="empId">
-      <value>101</value>
-    </property>
+    <property name="empId" value="101"/>
 	<property name="empName">
       <value>M Younus Raza</value>
     </property>
-    <!-- additional collaborators and configuration for this bean go here -->
+  </bean>
+  
+  <!-- Initializing Object using Constructor arguments and their types. -->
+  <bean id="employee2"
+        class="com.moha0902.learn.Employee">
+    <constructor-arg>
+    	<value>102</value>
+    </constructor-arg>
+    <constructor-arg type="java.lang.String" value="Richard Feynman"/>
+  </bean>
+  
+  <!-- Initializing Object using Constructor arguments and their index. -->
+  <bean id="employee3"
+        class="com.moha0902.learn.Employee">
+    <constructor-arg index="0" value="103"/>
+    <constructor-arg index="1" value="Dan Brown"/>
   </bean>
 
   <!-- more bean definitions for services go here -->
